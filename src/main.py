@@ -34,9 +34,7 @@ def run_search(model: str, content: str, available_tools):
         
         for tool_call in response.message.tool_calls: function_to_call = available_tools.get(tool_call.function.name)
 
-        if not function_to_call:
-            messages.append({'role': 'tool', 'content': f'Tool {tool_call.function.name} not found', 'tool_name': tool_call.function.name})
-            continue
+        if not function_to_call: messages.append({'role': 'tool', 'content': f'Tool {tool_call.function.name} not found', 'tool_name': tool_call.function.name}); continue
 
         args = tool_call.function.arguments
         result = function_to_call(**args)

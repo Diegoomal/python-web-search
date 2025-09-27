@@ -72,5 +72,6 @@ def main():
 
     run_search(model=args.model, content=args.content, available_tools=available_tools)
 
+
 if __name__ == "__main__":
     main()

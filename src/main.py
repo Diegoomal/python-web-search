@@ -59,7 +59,7 @@ def main():
 
         if os.getenv('OLLAMA_API_KEY') is None: raise ValueError('OLLAMA_API_KEY environment variable not set.')
         
-        available_tools = {'web_search': web_search, 'web_fetch': web_fetch}
+        # available_tools = {'web_search': web_search, 'web_fetch': web_fetch}
 
         def ollama_web_search(query: str):  return web_search(query=query, max_results=3)
         available_tools = {'web_search': ollama_web_search, 'web_fetch': web_fetch}

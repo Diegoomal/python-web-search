@@ -51,25 +51,28 @@ def main():
 
     args = parse_arguments()
 
-    if args.web_searcher not in ['ollama', 'tavily']: raise ValueError("Invalid web searcher. Choose either 'ollama' or 'tavily'.")
+    if args.web_searcher not in ['ollama', 'tavily']: raise ValueError('Invalid web searcher. Choose either "ollama" or "tavily".')
     
     available_tools = None
 
     if args.web_searcher == 'ollama':
 
-        if os.getenv('OLLAMA_API_KEY') is None: raise ValueError("OLLAMA_API_KEY environment variable not set.")
+        if os.getenv('OLLAMA_API_KEY') is None: raise ValueError('OLLAMA_API_KEY environment variable not set.')
         
         available_tools = {'web_search': web_search, 'web_fetch': web_fetch}
 
+        def ollama_web_search(query: str):  return web_search(query=query, max_results=3)
+        available_tools = {'web_search': ollama_web_search, 'web_fetch': web_fetch}
+
     elif args.web_searcher == 'tavily':
         
-        if os.getenv('TAVILY_API_KEY') is None: raise ValueError("TAVILY_API_KEY environment variable not set.")
+        if os.getenv('TAVILY_API_KEY') is None: raise ValueError('TAVILY_API_KEY environment variable not set.')
         
         def tavily_web_search(query: str):
             tavily = TavilyClient(api_key=os.getenv('TAVILY_API_KEY'))
             return tavily.search(query=query, max_results=3)['results']
         
-        available_tools = {'web_search': tavily_web_search}        
+        available_tools = {'web_search': tavily_web_search}  
 
     run_search(model=args.model, content=args.content, available_tools=available_tools)
 

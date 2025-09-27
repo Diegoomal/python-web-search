@@ -29,8 +29,8 @@
 ## RUN
 
 ``` python src/main.py ```
-``` python src/main.py --model qwen3:0.6b --web-searcher ollama --content "what is ollama's new engine" ```
-``` python src/main.py --model qwen3:0.6b --web-searcher tavily --content "what is ollama's new engine" ```
+``` python src/main.py --model qwen3:0.6b --web-searcher ollama --content "who is Goku?" ```
+``` python src/main.py --model qwen3:0.6b --web-searcher tavily --content "who is Goku?" ```
 
 ## Ollama Snippets
 
@@ -49,5 +49,7 @@
 ## Other References
 
 [github_author](https://github.com/Diegoomal)
+
+[ollama](https://ollama.com/blog/web-search)
 
 [tavily](https://www.tavily.com/)

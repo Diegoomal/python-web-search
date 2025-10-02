@@ -12,29 +12,27 @@
 
 ``` notebooks/main.ipynb ```
 
-## Create ENV
+## Conda Snippets
+
+### Create environment
 
 ``` conda env create -n web-search-env -f ./env.yml ```
 
-## Update ENV
+### Update environment
 
 ``` conda env update -n web-search-env -f ./env.yml ```
 
-## Remove ENV
+### Remove environment
 
 ``` conda env remove --n web-search-env ```
 
-## Activate ENV
+### Activate environment
 
 ``` conda activate web-search-env ```
 
-## RUN
+### Deactivate environment
 
-``` python src/main.py ```
-
-``` python src/main.py --model qwen3:0.6b --web-searcher ollama --content "who is Goku?" ```
-
-``` python src/main.py --model qwen3:0.6b --web-searcher tavily --content "who is Goku?" ```
+``` conda deactivate ```
 
 ## Ollama Snippets
 
@@ -49,6 +47,16 @@
 
 ### Official example
 ``` https://ollama.com/blog/web-search ```
+
+## RUN
+
+``` python src/main.py ```
+
+``` python src/main.py --model qwen3:0.6b --web-searcher ollama --content "who is Goku?" ```
+
+``` python src/main.py --model qwen3:0.6b --web-searcher tavily --content "who is Goku?" ```
+
+
 
 ## Other References
 

@@ -8,10 +8,6 @@
 
 ``` OLLAMA_API_KEY='...' ```
 
-## Notebooks with examples
-
-``` notebooks/main.ipynb ```
-
 ## Conda Snippets
 
 ### Create environment
@@ -48,6 +44,10 @@
 ### Official example
 ``` https://ollama.com/blog/web-search ```
 
+## Notebooks with examples
+
+``` notebooks/main.ipynb ```
+
 ## RUN
 
 ``` python src/main.py ```
@@ -55,8 +55,6 @@
 ``` python src/main.py --model qwen3:0.6b --web-searcher ollama --content "who is Goku?" ```
 
 ``` python src/main.py --model qwen3:0.6b --web-searcher tavily --content "who is Goku?" ```
-
-
 
 ## Other References
 

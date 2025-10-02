@@ -4,7 +4,7 @@ from tavily import TavilyClient                                                 
 from ollama import chat, web_fetch, web_search                                  # type: ignore
 
 
-def parse_arguments():
+def get_arguments():
     parser = argparse.ArgumentParser(description='Process model, web searcher and content parameters')
     parser.add_argument('--model',          type=str, required=True, help='Model parameter',        default='llama2')
     parser.add_argument('--web-searcher',   type=str, required=True, help='Web searcher parameter', default='ollama', choices=['ollama', 'tavily'])
@@ -47,7 +47,7 @@ def main():
 
     load_dotenv()
 
-    args = parse_arguments()
+    args = get_arguments()
 
     if args.web_searcher not in ['ollama', 'tavily']: raise ValueError('Invalid web searcher. Choose either "ollama" or "tavily".')
     

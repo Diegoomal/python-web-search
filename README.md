@@ -1,4 +1,4 @@
-# Ollama Web Search
+# Web Search - Ollama | Tavily
 
 ## Setup Configs
 
@@ -12,19 +12,19 @@
 
 ## Create ENV
 
-``` conda env create -n ollama-websearch-env -f ./env.yml ```
+``` conda env create -n web-search-env -f ./env.yml ```
 
 ## Update ENV
 
-``` conda env update -n ollama-websearch-env -f ./env.yml ```
+``` conda env update -n web-search-env -f ./env.yml ```
 
 ## Remove ENV
 
-``` conda env remove --n ollama-websearch-env ```
+``` conda env remove --n web-search-env ```
 
 ## Activate ENV
 
-``` conda activate ollama-websearch-env ```
+``` conda activate web-search-env ```
 
 ## RUN
 

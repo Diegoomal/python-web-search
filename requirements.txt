@@ -10,7 +10,7 @@ ipywidgets==8.1.4
 jupyterlab-widgets==3.0.12
 widgetsnbextension==4.0.12
 
-# 
+# Components
 python-dotenv==1.1.1
 ollama==0.6.0
 tavily-python==0.7.12

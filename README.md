@@ -3,7 +3,9 @@
 ## Setup Configs
 
 ### .env
+
 ``` TAVILY_API_KEY='...' ```
+
 ``` OLLAMA_API_KEY='...' ```
 
 ## Notebooks with examples
@@ -29,7 +31,9 @@
 ## RUN
 
 ``` python src/main.py ```
+
 ``` python src/main.py --model qwen3:0.6b --web-searcher ollama --content "who is Goku?" ```
+
 ``` python src/main.py --model qwen3:0.6b --web-searcher tavily --content "who is Goku?" ```
 
 ## Ollama Snippets
